@@ -1,0 +1,153 @@
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+
+    --white: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0 0;
+    border: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: var(--main-background);
+}
+
+/* MOBILE SCREEN SIZE */
+.main-container {
+    width: 80%;
+    background-color: var(--card-background);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+/* IMAGE */
+.mobile {
+    width: 100%;
+}
+.openspace {
+    border-radius: 10px 10px 0 0;
+    background-color: hsl(277, 64%, 61%);
+}
+.openspace img {
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+.desktop {display: none;}
+
+/* TEXTs */
+.title {
+    margin: 40px 30px 15px 30px;
+}
+.title span {
+    color: var(--accent);
+}
+
+.text {
+    color: var(--stat-headings);
+    font-size: 13px;
+    line-height: 1.4rem;
+    margin: 20px 35px 30px 40px;
+}
+
+.numbers {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 25px 0 5px 0;
+}
+.capitalize {
+    color: var(--stat-headings);
+    text-transform: uppercase;
+    font-size: 9.5px;
+    letter-spacing: .05rem;
+}
+.queries {
+    padding-bottom: 30px;
+}
+
+
+/* F O O T E R */
+.attribution {
+    font-size: 10px;
+    text-align: center; 
+    color: var(--stat-headings);
+    font-family: 'Inter', sans-serif;
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+
+/* DESKTOP SCREEN SIZE */
+@media (min-width: 950px) {
+    .main-container {
+        text-align: left;
+        display: grid;
+        width: 76.7%;
+        grid-template-columns: 39.26vw  37.38vw;
+        grid-template-rows: 30px 132px 141px 137px;
+        margin: 180px auto 20px auto;
+    }
+
+    /* TEXTS */
+    .title {
+        grid-row: 2;
+        grid-column: 1;
+        font-size: 2.50vw;
+        margin: 40px 30px 20px 5vw;
+    }
+    .text { 
+        grid-row: 3;
+        grid-column: 1;
+        margin: 20px 120px 30px 5vw;
+        font-size: 0.935rem;
+        line-height: 1.6rem;
+    }
+    .about {
+        display: flex;
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .numbers {
+        font-size: 24px;
+    }
+    .capitalize {
+        font-size: 12px;
+        font-family: 'Lexend Deca';
+        margin-top: 8px;
+    }
+    .compagnies {
+        margin: 0 4.58vw 40px 5vw;
+    }
+    .templates {
+        margin: 0 4.169vw 0 0;
+    }
+
+    /* IMAGE */
+    .mobile, .openspace {display: none;}
+
+    .desktop-space {
+        width: 100%;
+    }
+    .desktop {
+        display: flex;
+        grid-column: 2;
+        grid-row: 1/5;
+        background-color: hsl(277, 64%, 61%);
+        border-radius: 0 10px 10px 0;
+    }
+    .desktop img {
+        object-fit: cover;
+        mix-blend-mode: multiply;
+    }
+
+}
